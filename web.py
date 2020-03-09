@@ -8,7 +8,7 @@ print(f"see reponse from {URL}")
 response = requests.get(URL)
 
 def pretty_print_GET(response):
-    print(f"-------------START-----------\n{response.method}\r\n{response.url}\r\n\r\n{response.conent}")
+    print(f"-------------START-----------\n{response.request.method}\r\n{response.url}\r\n\r\n{response.content}")
 '''    '\r\n'.join('{}: {}'.format(k, v) for k, v in req.headers.items()), '''
 
 pretty_print_GET(response)
