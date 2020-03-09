@@ -2,12 +2,10 @@
 import requests 
 import sys
 
-print('http get to')
-print(sys.argv[1])
-
 URL = sys.argv[1]
+print(f"load json from {URL}")
 
-response = requests.get(url = URL)
+response = requests.get(URL)
 data = response.json() 
 
 print(data)
